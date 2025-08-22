@@ -100,8 +100,8 @@ function AttendFunction(){
             noreply.style.display = "flex";
         });
     } else {
-        console.log("不出席")
-        ADULT.value="0";
+        console.log("不出席1")
+        ADULT.value="no";
         KID.value ="0";
         VEGAN.value = "0";
         notAttend.forEach(noreply => {
