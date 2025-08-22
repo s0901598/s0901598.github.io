@@ -73,8 +73,8 @@ function closegallery(){
 function AttendFunction(){
     let Form1 = document.getElementById('form1'),
     notAttend = Form1.querySelectorAll(".not-attend"),
-    ATTEND = Form1["entry.877657756"],
-    ADULT = Form1["entry.1186257173"],
+    ATTEND = Form1["entry.1618816053"],
+    ADULT = Form1["entry.877657756"],
     KID = Form1["entry.168231074"],
     VEGAN = Form1["entry.1236172646"],
     INVITATION = Form1["entry.830037336"],
