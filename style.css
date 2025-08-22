@@ -253,6 +253,7 @@ header h1{
 .header-pic h1:last-of-type{ bottom: 30px; left: 90%; animation-name: welcome1;}
 
 .header-pic>div{
+    font-size: 22px;
     position: absolute;
     top: 5%;
     right: 1%;
@@ -1388,7 +1389,7 @@ footer div a:hover, footer div a:active{
 @media screen and (min-width: 750px){
     .header-pic{ height: 450px; }
     .header-pic>div{
-        font-size: 18px;
+        font-size: 20px;
         width: 100px;
         height: 100px;
     }
