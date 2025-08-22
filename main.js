@@ -96,7 +96,6 @@ function AttendFunction(){
         ADULT.value = "";
         KID.value = "";
         VEGAN.value = "";
-
         notAttend.forEach(noreply => {
             noreply.style.display = "flex";
         });
