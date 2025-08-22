@@ -1,3 +1,5 @@
+
+
 var submitted = false;
 function music(){
     let musiconoroff = document.getElementById('music-onoroff'),
@@ -100,7 +102,7 @@ function AttendFunction(){
             noreply.style.display = "flex";
         });
     } else {
-        console.log("不出席1")
+        console.log("不出席3")
         ADULT.value ="0";
         KID.value ="0";
         VEGAN.value = "0";
@@ -217,3 +219,4 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "LET'S CELEBRATE !";
   }
 }, 1000);
+
