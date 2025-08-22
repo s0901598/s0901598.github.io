@@ -230,7 +230,7 @@ var submitted = false;
 function submitform1(){
     let Form1 = document.getElementById('form1'),
     NAME = document.getElementById("Name").value,
-    ATTEND = Form1.elements["entry.1130099705"].value,
+    ATTEND = Form1.elements["entry.1618816053"].value,
     ADULT = document.getElementById("Adult").value,
     KID = document.getElementById("Kid").value,
     VEGAN = document.getElementById("Vegan").value,
@@ -276,7 +276,7 @@ function submitform1(){
         
         $.ajax({
           type: "get",
-          url: "https://docs.google.com/spreadsheets/d/1NMF3mxNU3SwseHj1p-vqknnIqoYJbsR53MKP19M2fig/edit?resourcekey=&gid=391747883#gid=391747883",
+          url: "https://docs.google.com/spreadsheets/d/1gYgLgWY9suhtoQZQW05krghZi3G1K4xYVKasXaK1zII/edit?resourcekey=&gid=1026309814#gid=1026309814",
           data: {
             "SUBMITTIME": SUBMITTIME, 
             "NAME": NAME, 
