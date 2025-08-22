@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>wedding</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Save the Date for the wedding of Jay and Gabrielle!" />
+    <meta property="og:title" content="">
+    <meta property="og:image" content="01.webp">
+    <meta property="og:description" content="Save the Date for the wedding of Jay and Gabrielle!">
+    <meta name="author" content="LittleRoomWeb,littleroomweb@gmail.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- <div id="music-onoroff">
+        <div>
+            <p>進入網站前，請先選擇<br>是否想搭配音樂瀏覽喜帖？</p>
+            <a href="javascript:void(0)" onclick="music()">是</a>
+            <a href="javascript:void(0)"
+                onclick="document.getElementById('music-onoroff').style.display = 'none';">否</a>
+            <p style="font-size: 12px;">＊之後仍可透過右下角開關音樂唷！</p>
+        </div>
+    </div> -->
+
+    <div class="music-button" onclick="music()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="5.5" cy="17.5" r="2.5" />
+            <circle cx="17.5" cy="15.5" r="2.5" />
+            <path d="M8 17V5l12-2v12" />
+        </svg>
+        <div class="music-off-line" id="music-off-line"></div>
+    </div>
+    <audio loop>
+        <source src="https://littleroomweb.com/template/music/Maya Isacowitz - Noam.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header id="header">
+        <div class="header-name">
+            <div class="house">
+                <svg viewBox="-50 -50 200 200">
+                    <polygon class="roof" stroke-linejoin="round" points="60,0 0,50 120,50" />
+                </svg>
+            </div>
+            <h1>Ian +</h1>
+            <h1>Alice</h1>
+        </div>
+        <div class="header-pic">
+            <h1>我</h1>
+            <h1></h1>
+            <h1>們</h1>
+            <h1></h1>
+            <h1>結</h1>
+            <h1></h1>
+            <h1>婚</h1>
+            <h1></h1>
+            <h1>了</h1>
+            <h1></h1>
+            <h1><i>!</i></h1>
+            <div>April.25</div>
+        </div>
+        <a href="javascript:void(0)" onclick="JumpTo('intro')">↓</a>
+    </header>
+
+    <div class="intro" id="intro">
+        <div class="intro-box" id="groom-intro">
+            <div class="intro-pic"></div>
+            <div class="intro-title">新<br>郎</div>
+            <div class="intro-content">
+                <h1>Jay</h1>
+                <p>介紹介紹介紹介紹<br>介紹介紹介紹介紹介紹介紹<br>介紹介紹介紹介紹介紹</p>
+            </div>
+        </div>
+        <div class="intro-box" id="bride-intro">
+            <div class="intro-pic"></div>
+            <div class="intro-title">新<br>娘</div>
+            <div class="intro-content">
+                <h1>Gabrielle</h1>
+                <p>介紹介紹介紹介紹<br>介紹介紹介紹介紹介紹介紹<br>介紹介紹介紹介紹介紹</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="invite">
+        <div class="invite-pic" id="invite-pic1"></div>
+        <div class="invite-content">
+            <div class="invite-title">
+                <h1>我</h1>
+                <h1>們</h1>
+                <h1>結</h1>
+                <h1>婚</h1>
+                <h1>了</h1>
+                <h1>!</h1>
+            </div>
+            <p>邀請大家<br>2022.12.17（六）<br>前往台北松菸誠品行旅<br>與我們一起慶祝</p>
+        </div>
+        <div class="invite-pic" id="invite-pic2"></div>
+    </div>
+
+    <div class="schedule">
+        <div class="left-title">
+            <div></div>
+            <h1>流程</h1>
+        </div>
+        <div class="schedule-box ">
+            <div>
+                <p class="time">11:40</p>
+                <p class="activity">婚宴入席</p>
+            </div>
+            <span class="timeline" id="timeline1"><span></span></span>
+            <div>
+                <p class="time">12:00</p>
+                <p class="activity">婚宴開席</p>
+            </div>
+            <span class="timeline" id="timeline2"><span></span></span>
+            <div>
+                <p class="time">12:30PM</p>
+                <p class="activity">活動</p>
+            </div>
+            <span class="timeline" id="timeline3"><span></span></span>
+            <div>
+                <p class="time">13:30</p>
+                <p class="activity">送客</p>
+            </div>
+            <span class="timeline" id="timeline4"><span></span></span>
+            <div>
+                <p class="time">07:30PM</p>
+                <p class="activity">PARTY!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="traffic">
+        <div class="left-title">
+            <div></div>
+            <h1>交通</h1>
+        </div>
+        <div class="traffic-box">
+            <div class="traffic-content">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                </svg>
+                <p>新莊頤品飯店<br>新北勢新莊區五工路66號(晶冠廣場)</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                        d="M96 0C43 0 0 43 0 96L0 352c0 48 35.2 87.7 81.1 94.9l-46 46C28.1 499.9 33.1 512 43 512l39.7 0c8.5 0 16.6-3.4 22.6-9.4L160 448l128 0 54.6 54.6c6 6 14.1 9.4 22.6 9.4l39.7 0c10 0 15-12.1 7.9-19.1l-46-46c46-7.1 81.1-46.9 81.1-94.9l0-256c0-53-43-96-96-96L96 0zM64 128c0-17.7 14.3-32 32-32l80 0c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32l-80 0c-17.7 0-32-14.3-32-32l0-96zM272 96l80 0c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32l-80 0c-17.7 0-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM64 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm288-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                </svg>
+                <p>
+                    搭乘捷運<br>
+                    ・機場線，新北產業園區A3站<br>
+                    ・環狀線，新北產業園區Y20站
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
+                </svg>
+                <p>
+                    停車資訊<br>
+                    ・晶冠廣場停車場可折抵停車 <br>
+                    由五工路68巷右轉200公尺可到達
+                </p>
+            </div>
+            <div class="map">
+                <img src="map.png" alt="map">
+                <a href="https://www.google.com/maps/place/%E9%A0%A4%E5%93%81%E5%A4%A7%E9%A3%AF%E5%BA%97+%E6%96%B0%E8%8E%8A%E6%99%B6%E5%86%A0%E9%A4%A8/@25.0624373,121.4586609,17z/data=!3m1!5s0x3442a8905d29d5c3:0x4fa137e40dd1dc96!4m6!3m5!1s0x3442a8906b9b4b69:0x79345a0a8bedd673!8m2!3d25.0637153!4d121.4584463!16s%2Fg%2F11b77qrjyq?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        style="width: 30px; height: 30px;">
+                        <path
+                            d="M7.25 1.75a.75.75 0 0 1 1.5 0v1.5a.75.75 0 0 1-1.5 0v-1.5ZM11.536 2.904a.75.75 0 1 1 1.06 1.06l-1.06 1.061a.75.75 0 0 1-1.061-1.06l1.06-1.061ZM14.5 7.5a.75.75 0 0 0-.75-.75h-1.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 .75-.75ZM4.464 9.975a.75.75 0 0 1 1.061 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061ZM4.5 7.5a.75.75 0 0 0-.75-.75h-1.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 .75-.75ZM5.525 3.964a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 1.06-1.061l1.061 1.06ZM8.779 7.438a.75.75 0 0 0-1.368.366l-.396 5.283a.75.75 0 0 0 1.212.646l.602-.474.288 1.074a.75.75 0 1 0 1.449-.388l-.288-1.075.759.11a.75.75 0 0 0 .726-1.165L8.78 7.438Z" />
+                    </svg>
+                    open google maps
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="dress-code">
+        <div class="middle-title">
+            <div></div>
+            <h1>服裝</h1>
+        </div>
+        <div class="dress-code-box">
+            <div>
+                <div class="color" id="color1"></div>
+                米白
+            </div>
+            <div>
+                <div class="color" id="color2"></div>
+                奶茶
+            </div>
+            <div>
+                <div class="color" id="color3"></div>
+                黑灰
+            </div>
+            <div>
+                <div class="color" id="color4"></div>
+                深藍
+            </div>
+        </div>
+        <p><span class="decor-slash">\</span>誠邀著上述色系服裝出席<span class="decor-slash">/</span></p>
+
+    </div> -->
+
+
+    <div class="photo-video">
+        <div class="photo-box">
+            <div class="photo-video-title">
+                <div></div>
+                <h1>照片</h1>
+            </div>
+            <a href="javascript:void(0)" onclick="showgallery('photo-gallery')"
+                class="open-gallery-circle"><span>→</span></a>
+        </div>
+
+        <div class="video-box">
+            <div class="photo-video-title">
+                <div></div>
+                <h1>影片</h1>
+            </div>
+            <a href="javascript:void(0)" onclick="showgallery('video')" class="open-gallery-circle"><span>▶</span></a>
+        </div>
+    </div>
+
+    <a href="javascript:void(0)" id="closebutton" onclick="closegallery()">×</a>
+    <div id="gallery">
+        <div id="photo-gallery">
+            <div>
+                <img src="03.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+            </div>
+            <div>
+                <img src="04.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="04.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+                <img src="03.webp" alt="engagement photo">
+            </div>
+            <p>photos by <a href="https://www.instagram.com/hsiang.photo/" target="_blank">三木目</a></p>
+        </div>
+        <div id="video">
+            <iframe src="https://player.vimeo.com/video/714742920?h=b2a840ecef" width="640" height="360" loading="lazy"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+            <p>video by <a href="https://www.instagram.com/jay.phahphinne/" target="_blank">Jay.phahphinne</a></p>
+        </div>
+
+    </div>
+
+    <div class="countdown-area" id="countdown-area">
+        <div class="middle-title">
+            <div></div>
+            <h1>婚禮倒數</h1>
+        </div>
+        <p>距離婚禮還有</p>
+        <div class="countdown-area-box">
+            <div id="days"></div>
+            <div id="hours"></div>
+            <div id="mins"></div>
+            <div id="secs"></div>
+            <p>日</p>
+            <p>時</p>
+            <p>分</p>
+            <p>秒</p>
+        </div>
+        <p>期待與你們見面！</p>
+    </div>
+
+    <div class="RSVP">
+        <div class="middle-title">
+            <div></div>
+            <h1>出席表單</h1>
+        </div>
+        <div class="formarea" id="formarea">
+            <form id="form1"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfYRkrJqDM-xJSDUvzBLd2nWD6fpEwEgi2gZNGzWDQ0t6T9BQ/formResponse"
+                method="POST" target="hidden_iframe">
+    
+                <label for="yes" class="attend" onclick="AttendFunction()">
+                    <input type="radio" id="yes" value="出席" name="entry.1130099705" checked>
+                    <span>出席</span>
+                </label>
+                <label for="no" class="attend" onclick="AttendFunction()">
+                    <input type="radio" id="no" class="not-attend-checked" value="無法出席" name="entry.1130099705">
+                    <span>無法出席</span>
+                </label>
+    
+                <div class="form-grid">
+    
+                    <div class="form-title"><label for="Name">姓名</label></div>
+                    <div>
+                        <input type="text" id="Name" name="entry.332417739"><br>
+                    </div>
+    
+                    <div class="form-title not-attend"><span style="scale: 0.9;">參加人數<br>（包含自己）</span></div>
+                    <div class="AandK not-attend">
+                        <div>
+                            <label for="Adult">大人</label>
+                            <select id="Adult" name="entry.1282042653">
+                                <option value=""></option>
+                                <option value="0" disabled hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="Kid">小孩</label>
+                            <select id="Kid" name="entry.401083884">
+                                <option value=""></option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-title not-attend"><label for="Vegan">素食人數</label></div>
+                    <div class="not-attend">
+                        <select id="Vegan" name="entry.1580275973">
+                            <option value=""></option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-title"><label for="Invitation">是否需要<br>紙本喜帖</label></div>
+                    <div>
+                        <select id="Invitation" name="entry.185161345" onchange="InvitationFunction()">
+                            <option value=""></option>
+                            <option value="需要">需要</option>
+                            <option value="不需要">不需要</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-title"><label for="Address">喜帖<br>寄送地址</label></div>
+                    <div>
+                        <input type="text" id="Address" name="entry.1677057149" placeholder="請填郵遞區號＋地址"><br>
+                    </div>
+    
+                    <div class="form-title">想說的話</div>
+                    <textarea id="Message" name="entry.1360828809" rows="10" cols="20" placeholder="留言祝福我們吧！"></textarea>
+                </div>
+                <button id="submitbutton" type="button" onclick="submitform1()">送出</button>
+            </form>
+    
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { submitted = false; submitform(); }"></iframe>
+        </div>
+    </div>
+  
+    <div id="submit-success">
+        <div>
+            <h1>感謝填寫！</h1>
+            <div id="countdown"></div>
+            <a href="javascript:void(0)" id="submitokbutton" onclick="submitok()">×</a>
+        </div>
+    </div>
+
+
+    <div id="loading">
+        <div id="loader"></div>
+    </div>
+
+    <footer>
+        <a href="javascript:void(0)" onclick="JumpTo('header')">TOP</a>
+        <div>期待與你們見面</div>
+        <div class="footer-name">
+            Ian
+            <div class="footer-house">
+                <svg viewBox="-50 -50 200 200">
+                    <polygon class="roof" stroke-linejoin="round" points="60,0 0,50 120,50" />
+                </svg>
+            </div>
+            Alice
+        </div>
+        <div>
+            GoGoCompany © <a href="" target="_blank">DogNotAtHome</a> <br>
+            PHOTOS © <a href="" target="_blank">狗不在家</a><br>
+            All rights reserved.
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

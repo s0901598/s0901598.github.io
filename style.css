@@ -1,0 +1,1397 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Noto+Sans+TC:wght@500;700&family=Zen+Maru+Gothic:wght@700&display=swap');
+
+html{scroll-behavior: smooth;}
+body,html{height: 100%;}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gaegu','Noto Sans TC', sans-serif;
+    color: rgb(130, 110, 95);
+    background-color: rgb(237, 234, 230);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 20%, rgba(0, 0, 0, 0) 0%), radial-gradient(rgba(255, 255, 255, 0.2) 20%, rgba(0, 0, 0, 0) 0%);
+    background-size:100px 100px;
+    background-position: 0 0, 50px 50px;
+    letter-spacing: 3px;
+    font-size: 15px;
+    line-height: 2;
+}
+
+::selection{
+    color: rgb(244, 244, 244);
+    background-color: rgba(130, 110, 95, 0.7);
+}
+
+
+
+h1{
+    font-family: 'Gaegu','Zen Maru Gothic', sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#music-onoroff{
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+#music-onoroff>div{
+    background-color: rgb(130, 110, 95);
+    padding: 100px 70px;
+    position: relative;
+    border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+}
+
+/* #music-onoroff>div::before{
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+} */
+
+#music-onoroff a:link, #music-onoroff a:visited{
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 17px 3px 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+#music-onoroff a:link:last-of-type{
+    border: none;
+}
+
+#music-onoroff a:hover, #music-onoroff a:active{
+    color: rgb(130, 110, 95);
+    background-color: rgb(255, 255, 255);
+}
+
+.music-button{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(130, 110, 95);
+    border: 1px solid rgba(130, 110, 95, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 110;
+    animation: musicbutton 1.5s;
+    mix-blend-mode: multiply;
+}
+
+@keyframes musicbutton{
+    0%{
+        transform: rotate(-10deg);
+    }20%{
+        transform: rotate(10deg);
+    }40%{
+        transform: rotate(-10deg);
+    }60%{
+        transform: rotate(10deg);
+    }80%{
+        transform: rotate(-10deg);
+    }100%{
+        transform: rotate(0);
+    }
+}
+
+.music-off-line{
+    position: absolute;
+    width: 80%;
+    border-top: 1px solid rgba(130, 110, 95, 0.9);
+    transform: rotate(45deg);
+    transform-origin: top left;
+    top: 20%;
+    left: 25%;
+    transition: 0.5s;
+}
+
+.music-off-line.playmusic{
+    width: 0;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.header-name{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.house{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    top: 40%;
+    right: -5%;
+    border-radius: 5px;
+}
+
+.house svg{
+    position: absolute;
+    bottom: -25px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+}
+
+.roof{
+    fill: rgb(255, 255, 255);
+    stroke: rgb(255, 255, 255);
+    stroke-width: 10;
+}
+
+
+
+.header-name>h1{
+    position: relative;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.header-name>h1:last-of-type{
+    text-indent: 30px;
+}
+
+
+
+.header-pic{
+    width: 55%;
+    max-width: 450px;
+    min-width: 280px;
+    height: 300px;
+    border-radius: 56% 44% 66% 34% / 48% 68% 32% 52% ;
+    background-image: url('pic1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 50%;
+    position: relative;
+}
+
+.header-pic h1{
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1s;
+}
+
+@keyframes welcome1{
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes welcome2{
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.header-pic h1:first-child{ bottom: 73px; left: -1%; animation-name: welcome2;}
+.header-pic h1:nth-child(2){ bottom: 30px; left: 6%; animation-name: welcome1;}
+.header-pic h1:nth-child(3){ bottom: -3px; left: 13%; animation-name: welcome2;}
+.header-pic h1:nth-child(4){ bottom: -25px; left: 25%; animation-name: welcome1;}
+.header-pic h1:nth-child(5){ bottom: -28px; left: 37%; animation-name: welcome2;}
+.header-pic h1:nth-child(6){ bottom: -20px; left: 49%; animation-name: welcome1;}
+.header-pic h1:nth-child(7){ bottom: -10px; left: 59%; animation-name: welcome2;}
+.header-pic h1:nth-child(8){ bottom: -5px; left: 69%; animation-name: welcome1;}
+.header-pic h1:nth-child(9){ bottom: 20px; left: 79%; animation-name: welcome2;}
+.header-pic h1:last-of-type{ bottom: 30px; left: 90%; animation-name: welcome1;}
+
+.header-pic>div{
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: changeborder;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1.5s; 
+}
+
+header>a{
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: rgb(130, 110, 95);
+    text-decoration: none;
+    animation-name: scrollp;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes scrollp{
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.intro{
+    padding: 150px 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro-box{
+    position: relative;
+    margin-bottom: 150px;
+    background-color: rgb(255, 255, 255);
+    width: 85%;
+    max-width: 500px;
+    border-radius: 56% 44% 66% 34% / 48% 68% 32% 52% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-pic{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 150px;
+    height: 160px;
+    border-radius: 44% 56% 51% 49% / 52% 61% 39% 48% ;
+    background-repeat: no-repeat;
+}
+
+
+#groom-intro>.intro-pic{
+    top: -50px;
+    left: -15px;
+    background-image: url('pic2.jpg');
+    background-size: 650%;
+    background-position: 40% 65%;
+}
+
+#bride-intro>.intro-pic{
+    top: -70px;
+    right: -10px;
+    background-image: url('bride.webp');
+    background-size: 300%;
+    background-position: 85% 35%;
+}
+
+.intro-title{
+    position: absolute;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 110, 95);
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 47% 53% 59% 41% / 57% 42% 58% 43% ;
+    animation-name: introtitle;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1s;   
+}
+
+@keyframes introtitle{
+    0% {
+        transform: rotate(-5deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+#groom-intro>.intro-title{
+    top: -10px;
+    left: 105px;
+}
+
+#bride-intro>.intro-title{
+    top: 20px;
+    right: 100px;
+}
+
+
+.intro-content{
+    padding: 120px 50px 90px 50px;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.intro-content.active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+
+.invite{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.invite>div{
+    border-radius: 47% 53% 42% 58% / 57% 53% 47% 43% ;
+}
+
+.invite-pic{
+    background-color: rgb(0, 0, 0);
+    width: 230px;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-size: 400%;
+    animation-name: changeBorderRotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1.5s;
+}
+
+@keyframes changeBorderRotate{
+    0% {
+        border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+        transform: rotate(-5deg);
+    }
+    25% {
+        border-radius: 52% 48% 59% 41% / 48% 64% 36% 52%; 
+        transform: rotate(0deg);
+    }
+    50% {
+        border-radius: 62% 38% 41% 59% / 60% 48% 52% 40%; 
+        transform: rotate(-5deg);
+    }
+    75% {
+        border-radius: 52% 48% 59% 41% / 48% 64% 36% 52%;
+        transform: rotate(0deg);
+    }
+    100% {
+        border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+        transform: rotate(5deg);
+    }
+}
+
+#invite-pic1{
+    background-image: url('02.webp');
+    background-position: 45% 40%;
+}
+
+#invite-pic2{
+    background-image: url('02.webp');
+    background-position: 90% 45%;
+}
+
+.invite-content{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 130px 80px 110px 80px;
+    margin: 50px 30px 30px 30px;
+}
+
+.invite-content>p{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.invite.active .invite-content>p{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.invite-title{
+    position: absolute;
+    top: -20px;
+    display: flex;
+}
+
+
+.invite-title h1:nth-child(odd){
+    padding: 5px 5px 0 5px;
+}
+
+.schedule{
+    padding: 100px 0 150px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.left-title{
+    position: relative;
+    display: inline-block;
+    left: 50px;
+}
+
+.middle-title{
+    position: relative;
+    display: inline-block;
+}
+
+.left-title>div, .middle-title>div{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 35% 65% 38% 62% / 38% 44% 56% 62% ;
+    right: -10px;
+    bottom: -10px;
+}
+
+.left-title>h1, .middle-title>h1{
+    position: relative;
+}
+
+.schedule-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.schedule-box>div{
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.schedule-box>div:nth-of-type(even){
+    padding: 0 50px 0 0;
+}
+
+.schedule-box.active div{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+
+.schedule-box.active div:nth-of-type(2){
+    transition-delay: 1s;
+}
+.schedule-box.active div:nth-of-type(3){
+    transition-delay: 2s;
+}
+.schedule-box.active div:nth-of-type(4){
+    transition-delay: 3s;
+}
+.schedule-box.active div:nth-of-type(5){
+    transition-delay: 4s;
+}
+
+.timeline{
+    width: 110px;
+    height: 110px;
+}
+
+.timeline>span{
+    display: inline-block;
+    width: 3px;
+    height: 0;
+    background-color: rgba(130, 110, 95,0.2);
+    border-radius: 47% 53% 26% 74% / 100% 60% 40% 0% ;
+    margin: 30px 50px 30px 30px;
+    transform: rotate(30deg)    
+}
+
+#timeline2>span{
+    transform: rotate(-30deg);
+}
+
+#timeline4>span{
+    transform: rotate(-30deg);
+}
+
+.schedule-box.active .timeline>span{
+    width: 3px;
+    height: 50px;
+    transition: 1s;
+}
+
+.schedule-box.active #timeline1>span{
+    transition-delay: 0.5s;
+}
+
+.schedule-box.active #timeline2>span{
+    transition-delay: 1.5s;
+}
+
+.schedule-box.active #timeline3>span{
+    transition-delay: 2.5s;
+}
+
+.schedule-box.active #timeline4>span{
+    transition-delay: 3.5s;
+}
+
+
+
+.schedule p{
+    margin: 0;
+}
+
+.time{
+    font-size: 20px;
+}
+
+
+.traffic{
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.traffic-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.traffic-box>div{
+    margin: 30px 30px 0 30px;
+}
+
+.traffic-content{
+    display: grid;
+    grid-template-columns: 25px auto;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.traffic.active .traffic-content{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.traffic-content>svg{
+    padding-top: 20px;
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.map{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.map>img{
+    width: 100%;
+    display: block;
+}
+
+.map>a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: rgb(130, 110, 95);
+    background-color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.map.active a{
+    opacity: 0;
+    transition: 2s 1s;
+}
+
+
+.map:hover a{
+    animation: maphint 1s forwards;
+}
+
+@keyframes maphint{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.dress-code{
+    padding: 50px 0 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dress-code-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0 30px 0;
+}
+
+.dress-code-box>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.color{
+    width: 75px;
+    height: 70px;
+    border-radius: 61% 39% 59% 41% / 59% 58% 42% 41% ;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation-name: changeborder;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1.5s;  
+}
+
+@keyframes changeborder{
+    0% {
+        border-radius: 55% 45% 41% 59% / 51% 49% 51% 49%;
+    }
+    25% {
+        border-radius: 52% 48% 59% 41% / 48% 64% 36% 52%;
+    }
+    50% {
+        border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%; 
+    }
+    75% {
+        border-radius: 55% 45% 44% 56% / 51% 56% 44% 49%;
+    }
+    100% {
+        border-radius: 61% 39% 59% 41% / 59% 58% 42% 41%;
+    }
+}
+
+.dress-code.active .color{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#color1{
+    background-color: rgb(244,244,243);
+}
+#color2{
+    background-color: rgb(226,220,214);
+}
+#color3{
+    background-color: rgb(30,30,30);
+}
+#color4{
+    background-color: rgb(31,31,48);
+}
+
+.dress-code.active #color1{
+    transition-delay: 0.5s;
+}
+.dress-code.active #color2{
+    transition-delay: 1s;
+}
+.dress-code.active #color3{
+    transition-delay: 1.5s;
+}
+.dress-code.active #color4{
+    transition-delay: 2s;
+}
+
+.decor-slash{
+    display: inline-block;
+    pointer-events: none;
+    user-select:none;    
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    margin: 0 20px;
+    animation-name: slash;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1s;
+}
+
+@keyframes slash{
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.photo-video{
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-box, .video-box{
+    position: relative;
+    margin: 50px auto 150px auto;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 56% 44% 66% 34% / 48% 68% 32% 52%;
+}
+
+.photo-box{
+    background-image: url('pic1.webp');
+}
+
+.video-box{
+    background-image: url('04.webp');
+}
+
+.photo-video-title{
+    position: absolute;
+    display: inline-block;
+    top: -50px;
+}
+
+.video-box>.photo-video-title{
+    right: 0;
+}
+
+.photo-video-title>div{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 35% 65% 38% 62% / 38% 44% 56% 62% ;
+    right: -10px;
+    bottom: -10px;
+}
+
+.photo-video-title>h1{
+    position: relative;
+}
+
+.open-gallery-circle:link, .open-gallery-circle:visited{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    padding: 5px 0 0 5px;
+    color: rgba(255, 255, 255,0.7);
+    background-color: rgb(130, 110, 95);
+    border-radius: 61% 39% 59% 41% / 59% 58% 42% 41% ;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: changeborder2;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1.5s;    
+}
+
+.video-box>.open-gallery-circle:link, .video-box>.open-gallery-circle:visited{
+    bottom: -10px;
+    right: 80%;
+}
+
+@keyframes changeborder2{
+    0% {
+        border-radius: 61% 39% 59% 41% / 59% 58% 42% 41%;
+    }
+    25% {
+        border-radius: 52% 48% 59% 41% / 48% 64% 36% 52%; 
+    }
+    50% {
+        border-radius: 62% 38% 41% 59% / 60% 48% 52% 40%; 
+    }
+    75% {
+        border-radius: 52% 48% 59% 41% / 48% 64% 36% 52%;
+    }
+    100% {
+        border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+    }
+}
+
+.open-gallery-circle:hover span, .open-gallery-circle:active span{
+    transition: 0.5s;
+}
+
+.photo-box a:hover span, .photo-box a:active span{
+    transform: translateX(5px);
+}
+
+.video-box a:hover span, .video-box a:active span{
+    transform: scale(1.2);
+}
+
+
+
+#closebutton:link, #closebutton:visited{
+    position: fixed;
+    z-index: 101;
+    right: 20px;
+    top: 0;
+    color: rgb(130, 110, 95);
+    font-size: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+    display: none;
+}
+
+#closebutton:hover, #closebutton:active{
+    transform: scale(1.2);
+}
+
+#gallery{
+    text-align: center;
+    background-color: rgba(237, 234, 230,0.95);
+    position: fixed;
+    z-index: 100;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+#gallery a:link, #gallery a:visited{
+    color: rgb(130, 110, 95);
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+#gallery a:hover, #gallery a:active{
+    color: rgb(255, 255, 255)
+}
+
+#photo-gallery{
+    text-indent: 0;
+    padding: 100px 50px;
+    display: none;
+}
+
+#photo-gallery > div{
+    float: left;
+    width: 100%;
+    margin: 5px;
+}
+
+#photo-gallery img{
+    width: 100%;
+}
+
+#video{
+    display: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+iframe{
+    width: 90%;
+}
+
+.countdown-area{
+    width: 90%;
+    max-width: 700px;
+    padding: 50px 0 150px 0;
+    margin: auto;
+    text-align: center;
+}
+
+.countdown-area>p{
+    padding: 20px 0;
+}
+
+.countdown-area-box{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.countdown-area-box>div{
+    font-size: 18px;
+    width: 80px;
+    height: 80px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 110, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: changeborder2;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-duration: 1.5s;
+}
+
+
+.RSVP{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.formarea{
+    max-width: 320px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.attend{
+    position: relative;
+    color: rgba(130, 110, 95);
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Zen Maru Gothic','Noto Sans TC', sans-serif;
+    line-height: 1;
+    margin: 0 10px;
+    text-indent: 2px;
+    letter-spacing: 2px;
+}
+
+
+.attend input, .hideinput input{
+    position: absolute;
+    opacity: 0;
+}
+
+.attend span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 105px;
+    border: 1px solid rgba(130, 110, 95,0.3);
+    border-radius: 61% 39% 59% 41% / 59% 58% 42% 41% ;
+    transition: 0.5s;
+}
+
+.attend:hover span{
+    color: rgb(255, 255, 255);
+    background-color: rgba(130, 110, 95,0.5);
+}
+
+.attend input:checked ~ span{
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 110, 95);
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+    gap: 20px 5px;
+    text-indent: 0;
+    text-align: left;
+    margin: 40px 0 10px 0;
+}
+
+.form-grid>div:nth-child(1),.form-grid>div:nth-child(2){
+    align-self: first baseline;
+}
+
+
+.form-title{
+    font-weight: 700;
+    text-align: center;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 110, 95);
+    border-radius: 62% 38% 61% 39% / 46% 49% 51% 54% ;
+}
+
+input:not([type=submit]), select, textarea{
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px 10px 20px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    color: rgb(130, 110, 95);
+    border: 1px solid rgba(130, 110, 95,0.5);
+    background-color: rgba(130, 110, 95,0);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+}
+
+select{
+    height: 38px;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+    appearance: none;
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+textarea{
+    display: block;
+    resize: none;
+}
+
+
+::placeholder{
+    color: rgba(130, 110, 95,0.5);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.hideinput{
+    position: relative;
+    padding-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.hideinput span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border:1px solid rgb(130, 110, 95);
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+input[type=radio]:not(.attend>input) ~ span{
+    border-radius: 50%;
+}
+
+.hideinput:hover span{
+    background-color: rgba(130, 110, 95, 0.5);
+}
+
+.hideinput input:checked ~ span{
+    background-color: rgb(130, 110, 95);
+}
+
+.AandK{
+    display: flex;
+    flex-direction: column;
+}
+
+.AandK select{
+    margin: 5px 0;
+    width: calc(100% - 50px);
+}
+
+input[type=submit]{
+    color: rgb(130, 110, 95);
+    background-color: rgba(130, 110, 95,0);
+    border: 1px solid rgb(130, 110, 95);
+    padding: 10px 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    text-indent: 5px;
+    letter-spacing: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 1s;
+}
+
+#loading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#loader{
+    border: 8px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    border-top: 8px solid rgba(255, 255, 255, 0);
+    width: 70px;
+    height: 70px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+  
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#submit-success{
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#submit-success h1{
+    position: relative;
+    letter-spacing: 5px;
+    text-indent: 5px;
+    font-size: 20px;
+}
+
+
+#submit-success>div{
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 110, 95);
+    padding: 100px 70px;
+    position: relative;
+    border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+}
+
+#submit-success>div::before{
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255,0.5);
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 47% 53% 42% 58% / 57% 53% 47% 43%;
+}
+
+#countdown{
+    margin: 30px 0 0 0;
+    position: relative;
+}
+
+#submit-success a:link, #submit-success a:visited{
+    position: absolute;
+    color: rgb(130, 110, 95);
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 61% 39% 59% 41% / 59% 58% 42% 41%;
+    transition: 0.5s;
+    top: 25px;
+    right: 25px;
+}
+
+#submit-success a:hover, #submit-success a:active{
+    scale: 1.2;
+}
+
+footer{
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 30px 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(130, 110, 95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+
+footer > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: rgba(255, 255, 255,0.7);
+    background-color: rgb(130, 110, 95);
+    font-size: 10px;
+    text-indent: 2px;
+    text-decoration: none;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+footer div a:link, footer div a:visited{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+footer div a:hover, footer div a:active{
+    color:rgba(255, 255, 255,0.5);
+}
+
+.footer-name{
+    display: flex;
+    align-items: center;
+    font-family: 'Gaegu','Noto Sans TC', sans-serif;
+    font-size: 15px;
+}
+
+.footer-house{
+    position: relative;
+    width: 30px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    margin: 25px 15px 15px 15px;
+}
+
+.footer-house svg{
+    position: absolute;
+    bottom: -20px;
+    left: -23px;
+    width: 70px;
+    height: 70px;
+}
+
+.footer-house .roof{
+    stroke-width: 8;
+}
+
+@media (hover){
+    input[type=submit]:hover, input[type=submit]:active{
+        color: rgb(255, 255, 255);
+        background-color: rgb(130, 110, 95);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .schedule-box{ flex-direction: row;}
+    .timeline>span{ width: 0; height: 3px; margin: 60px 30px 30px 30px;}
+    .schedule-box.active .timeline>span{width: 50px; height: 3px;}
+    .schedule-box>div:nth-of-type(even){ padding: 50px 0 0 0; }
+}
+
+@media screen and (min-width: 800px){
+    #photo-gallery > div{ width: 48%;}
+}
+
+@media screen and (min-width: 750px){
+    .header-pic{ height: 450px; }
+    .header-pic>div{
+        font-size: 18px;
+        width: 100px;
+        height: 100px;
+    }
+    header h1{ font-size: 40px;}
+    .house{
+        width: 70px;
+        height: 50px;
+    }
+    .house svg{
+        bottom: -40px;
+        left: -46px;
+        width: 150px;
+        height: 150px;
+    }
+    .photo-box, .video-box{ width:400px; height: 400px;}
+}
+
+@media screen and (min-width: 500px){
+    .photo{ height: 400px; }      
+    .video{ height: 300px; }
+}
