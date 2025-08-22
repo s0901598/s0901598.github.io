@@ -100,6 +100,7 @@ function AttendFunction(){
             noreply.style.display = "flex";
         });
     } else {
+        console.log("不出席")
         ADULT.value ="1";
         KID.value ="0";
         VEGAN.value = "0";
