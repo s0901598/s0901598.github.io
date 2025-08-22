@@ -100,8 +100,8 @@ function AttendFunction(){
             noreply.style.display = "flex";
         });
     } else {
-        ADULT.value = "0";
-        KID.value = "0";
+        ADULT.value ="1";
+        KID.value ="0";
         VEGAN.value = "0";
         notAttend.forEach(noreply => {
             noreply.style.display = "none";
