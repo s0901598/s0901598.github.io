@@ -101,7 +101,7 @@ function AttendFunction(){
         });
     } else {
         console.log("不出席")
-        ADULT.value ="0";
+        ADULT.value="x";
         KID.value ="0";
         VEGAN.value = "0";
         notAttend.forEach(noreply => {
