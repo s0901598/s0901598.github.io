@@ -159,8 +159,21 @@ function submitform1(){
                 document.getElementById('Address').scrollIntoView({ block: 'center' , behavior: 'smooth' });
                 alert('請留下喜帖收件地址');
             } else {
-                submitted = true;
-                Form1.submit();
+                const formData = new FormData(Form1);
+                fetch(Form1.action, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                })
+                .then(() => {
+                    console.log('提交成功');
+                    submitted = true;
+                    submitform(); // 顯示「感謝填寫！」訊息
+                })
+                .catch(error => {
+                    console.error('提交失敗', error);
+                    alert('提交失敗，請檢查網路或表單設置');
+                });
             }
 
         
