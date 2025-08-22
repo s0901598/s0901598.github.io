@@ -79,8 +79,8 @@ function AttendFunction(){
     VEGAN = Form1["entry.1236172646"],
     INVITATION = Form1["entry.830037336"],
     ADDRESS = Form1["entry.1934957082"],
-    NAME = Form1["entry.332417739"],
-    MESSAGE = Form1["entry.1404975391"];
+    NAME = Form1["entry.1404975391"],
+    MESSAGE = Form1["entry.1207225536"];
 
     // 清空所有欄位
     NAME.value = "";
