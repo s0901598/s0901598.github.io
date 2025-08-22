@@ -1188,6 +1188,21 @@ input[type=submit]{
     font-weight: 600;
     transition: 1s;
 }
+.send{
+    color: rgb(130, 110, 95);
+    background-color: rgba(130, 110, 95,0);
+    border: 1px solid rgb(130, 110, 95);
+    padding: 10px 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    text-indent: 5px;
+    letter-spacing: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 1s;
+
+}
 
 #loading{
     position: fixed;
@@ -1352,7 +1367,7 @@ footer div a:hover, footer div a:active{
 }
 
 @media (hover){
-    input[type=submit]:hover, input[type=submit]:active{
+    .send:hover, .send:active{
         color: rgb(255, 255, 255);
         background-color: rgb(130, 110, 95);
         cursor: pointer;
