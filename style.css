@@ -1438,10 +1438,10 @@ footer div a:hover, footer div a:active{
     #photo-gallery > div{ width: 48%;}
 }
 
-@media screen and (max-width: 750px){
+@media screen and (min-width: 750px){
     .header-pic{ height: 450px; }
     .header-pic>div{
-        font-size: 20px;
+        font-size: 18px;
         width: 100px;
         height: 100px;
     }
@@ -1461,7 +1461,7 @@ footer div a:hover, footer div a:active{
 
 @media screen and (max-width: 500px){
     .header-pic>div{
-        font-size: 24px;
+        font-size: 22px;
         width: 100px;
         height: 100px;
     }
