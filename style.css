@@ -510,6 +510,7 @@ header>a{
 }
 
 .invite.active .invite-content>p{
+    font-size: 18px;
     opacity: 1;
     transform: translateY(0);
     transition: 1s;
@@ -521,6 +522,7 @@ header>a{
     top: -20px;
     display: flex;
 }
+
 
 
 .invite-title h1:nth-child(odd){
@@ -1441,9 +1443,9 @@ footer div a:hover, footer div a:active{
 @media screen and (min-width: 750px){
     .header-pic{ height: 450px; }
     .header-pic>div{
-        font-size: 18px;
-        width: 100px;
-        height: 100px;
+        font-size:25px;
+        width: 110px;
+        height: 115px;
     }
     header h1{ font-size: 40px;}
     .house{
@@ -1463,7 +1465,7 @@ footer div a:hover, footer div a:active{
     .header-pic>div{
         font-size: 22px;
         width: 100px;
-        height: 100px;
+        height: 110px;
     }
    
     .photo{ height: 400px; }      
