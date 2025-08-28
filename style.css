@@ -507,10 +507,11 @@ header>a{
 .invite-content>p{
     opacity: 0;
     transform: translateY(50px);
+    font-size: 18px;
 }
 
 .invite.active .invite-content>p{
-    font-size: 18px;
+    
     opacity: 1;
     transform: translateY(0);
     transition: 1s;
