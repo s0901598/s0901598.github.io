@@ -235,7 +235,7 @@ header h1{
     min-width: 280px;
     height: 300px;
     border-radius: 56% 44% 66% 34% / 48% 68% 32% 52% ;
-    background-image: url('pic1.jpg');
+    background-image: url('h1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 20% 50%;
@@ -365,17 +365,17 @@ header>a{
 #groom-intro>.intro-pic{
     top: -50px;
     left: -15px;
-    background-image: url('pic2.jpg');
-    background-size: 650%;
-    background-position: 40% 65%;
+    background-image: url('h6.jpg');
+    background-size: 185%;
+    background-position: 38% 28%;
 }
 
 #bride-intro>.intro-pic{
     top: -70px;
     right: -10px;
-    background-image: url('bride.webp');
-    background-size: 300%;
-    background-position: 85% 35%;
+    background-image: url('h7.jpg');
+    background-size: 273%;
+    background-position: 12% 60%;
 }
 
 .intro-title{
