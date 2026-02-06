@@ -863,7 +863,7 @@ header>a{
 }
 
 .photo-box{
-    background-image: url('pic1.webp');
+    background-image: url('./b1.jpg');
 }
 
 .video-box{
@@ -1004,7 +1004,9 @@ header>a{
 }
 
 #photo-gallery img{
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+    
 }
 
 #video{
