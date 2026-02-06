@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +15,7 @@
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        
+
 </head>
 
 <body>
@@ -42,7 +40,7 @@
     </div>
     <audio loop>
         <source src="https://littleroomweb.com/template/music/Maya Isacowitz - Noam.mp3" type="audio/mpeg">
-    
+
     </audio>
 
     <header id="header">
@@ -67,7 +65,7 @@
             <h1>了</h1>
             <h1></h1>
             <h1><i>!</i></h1>
-            
+
             <div>2026<br>04.25</div>
         </div>
         <a href="javascript:void(0)" onclick="JumpTo('intro')">↓</a>
@@ -225,13 +223,13 @@
                 class="open-gallery-circle"><span>→</span></a>
         </div>
 
-        <div class="video-box">
+        <!-- <div class="video-box">
             <div class="photo-video-title">
                 <div></div>
                 <h1>影片</h1>
             </div>
             <a href="javascript:void(0)" onclick="showgallery('video')" class="open-gallery-circle"><span>▶</span></a>
-        </div>
+        </div> -->
     </div>
 
     <a href="javascript:void(0)" id="closebutton" onclick="closegallery()">×</a>
@@ -299,7 +297,7 @@
             <form id="form1"
                 action="https://docs.google.com/forms/d/e/1FAIpQLScjBhm0RwE0eKf_e7bVkJHZHTKBZdmuB0ufJ_hYQjuZoS9xmg/formResponse"
                 method="POST" target="hidden_iframe">
-    
+
                 <label for="yes" class="attend" onclick="AttendFunction()">
                     <input type="radio" id="yes" value="出席" name="entry.1618816053" checked>
                     <span>出席</span>
@@ -308,14 +306,14 @@
                     <input type="radio" id="no" class="not-attend-checked" value="無法出席" name="entry.1618816053">
                     <span>無法出席</span>
                 </label>
-    
+
                 <div class="form-grid">
-    
+
                     <div class="form-title"><label for="Name">姓名</label></div>
                     <div>
                         <input type="text" id="Name" name="entry.1404975391"><br>
                     </div>
-    
+
                     <div class="form-title not-attend"><span style="scale: 0.9;">參加人數<br>（包含自己）</span></div>
                     <div class="AandK not-attend">
                         <div>
@@ -348,7 +346,7 @@
                             </select>
                         </div>
                     </div>
-    
+
                     <div class="form-title not-attend"><label for="Vegan">素食人數</label></div>
                     <div class="not-attend">
                         <select id="Vegan" name="entry.1236172646">
@@ -366,7 +364,7 @@
                             <option value="10">10</option>
                         </select>
                     </div>
-    
+
                     <div class="form-title"><label for="Invitation">是否需要<br>紙本喜帖</label></div>
                     <div>
                         <select id="Invitation" name="entry.830037336" onchange="InvitationFunction()">
@@ -375,56 +373,56 @@
                             <option value="不需要">不需要</option>
                         </select>
                     </div>
-    
+
                     <div class="form-title"><label for="Address">喜帖<br>寄送地址</label></div>
                     <div>
                         <input type="text" id="Address" name="entry.1934957082" placeholder="請填郵遞區號＋地址"><br>
                     </div>
-    
+
                     <div class="form-title">想說的話</div>
-                    <textarea id="Message" name="entry.1207225536" rows="10" cols="20" placeholder="留言祝福我們吧！" pla ></textarea>
+                    <textarea id="Message" name="entry.1207225536" rows="10" cols="20" placeholder="留言祝福我們吧！"
+                        pla></textarea>
                 </div>
                 <button class="send" id="submitbutton" type="button" onclick="submitform1()">送出</button>
-               
+
             </form>
-    
+
             <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { submitted = false; submitform(); }"></iframe>                </div> -->
-    </div>
-  
-    <div id="submit-success">
-        <div>
-            <h1>感謝填寫！</h1>
-            <div id="countdown"></div>
-            <a href="javascript:void(0)" id="submitokbutton" onclick="submitok()">×</a>
         </div>
-    </div>
 
-
-    <div id="loading">
-        <div id="loader"></div>
-    </div>
-
-    <footer>
-        <a href="javascript:void(0)" onclick="JumpTo('header')">TOP</a>
-        <div>期待與你們見面</div>
-        <div class="footer-name">
-            Ian
-            <div class="footer-house">
-                <svg viewBox="-50 -50 200 200">
-                    <polygon class="roof" stroke-linejoin="round" points="60,0 0,50 120,50" />
-                </svg>
+        <div id="submit-success">
+            <div>
+                <h1>感謝填寫！</h1>
+                <div id="countdown"></div>
+                <a href="javascript:void(0)" id="submitokbutton" onclick="submitok()">×</a>
             </div>
-            Alice
         </div>
-        <div>
-            GoGoCompany © <a href="" target="_blank">DogNotAtHome</a> <br>
-            PHOTOS © <a href="" target="_blank">狗不在家</a><br>
-            All rights reserved.
+
+
+        <div id="loading">
+            <div id="loader"></div>
         </div>
-    </footer>
+
+        <footer>
+            <a href="javascript:void(0)" onclick="JumpTo('header')">TOP</a>
+            <div>期待與你們見面</div>
+            <div class="footer-name">
+                Ian
+                <div class="footer-house">
+                    <svg viewBox="-50 -50 200 200">
+                        <polygon class="roof" stroke-linejoin="round" points="60,0 0,50 120,50" />
+                    </svg>
+                </div>
+                Alice
+            </div>
+            <div>
+                GoGoCompany © <a href="" target="_blank">DogNotAtHome</a> <br>
+                PHOTOS © <a href="" target="_blank">狗不在家</a><br>
+                All rights reserved.
+            </div>
+        </footer>
 
 
 </body>
 
 </html>
-
