@@ -1461,6 +1461,9 @@ footer div a:hover, footer div a:active{
         height: 150px;
     }
     .photo-box, .video-box{ width:400px; height: 400px;}
+    .photo-gallery img{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 500px){
