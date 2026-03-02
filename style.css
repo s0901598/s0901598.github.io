@@ -489,8 +489,9 @@ header>a{
 }
 
 #invite-pic2{
-    background-image: url('02.webp');
-    background-position: 90% 45%;
+    background-size: 260px;
+    background-image: url('./pic03.jpg');
+    background-position: 45% 40%;
 }
 
 .invite-content{
